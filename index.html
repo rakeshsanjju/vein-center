@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/jQueryUi.min.css" />
+    <link rel="stylesheet" href="assets/css/textRotate.css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/theme/theme_type1.css" />
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 90px;
+            width: 380px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        .action-section {
+            display: flex;
+            /* Ensure items are in the same row */
+            flex-direction: row;
+            align-items: center;
+            /* Align items vertically */
+            gap: 20px;
+            /* Add space between the select and button */
+            margin-top: 30px;
+        }
+
+        .st-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+            /* Prevents text from wrapping */
+            min-width: 120px;
+            /* Ensures the button has enough width */
+        }
+
+        .st-color1 {
+            background-color: #007bff;
+            color: white;
+        }
+
+
+        select {
+            appearance: none;
+            /* Hides the default dropdown arrow */
+            -webkit-appearance: none;
+            /* Hides dropdown arrow in Safari */
+            -moz-appearance: none;
+            /* Hides dropdown arrow in Firefox */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        select:hover {
+            background-color: #0056b3;
+        }
+
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Responsive styles for max-width 640px */
+        @media (max-width: 640px) {
+            .container {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: center;
+                /* Center items horizontally */
+                justify-content: center;
+                /* Center items vertically */
+            }
+
+            .logo img {
+                width: 70%;
+                height: 200px;
+                /* Scale the logo */
+
+                margin-left: 30px;
+                border-radius: 15px;
+            }
+
+            .action-section {
+                flex-direction: column;
+                /* Stack items vertically */
+                gap: 15px;
+            }
+
+            select {
+                width: 90%;
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .st-btn {
+                width: 90%;
+                font-size: 14px;
+                padding: 8px 24px;
+            }
+        }
+
+        /* Responsive styles for max-width 475px */
+        @media (max-width: 475px) {
+            .container {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: center;
+                /* Center items horizontally */
+                justify-content: center;
+                /* Center items vertically */
+            }
+
+            .logo img {
+                width: 90%;
+                /* Scale the logo */
+
+                margin-left: 0px;
+                border-radius: 15px;
+            }
+
+            .action-section {
+                flex-direction: column;
+                /* Stack items vertically */
+                gap: 10px;
+            }
+
+            select {
+                width: 95%;
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+
+            .st-btn {
+                width: auto;
+                /* Allows the button width to adjust */
+                font-size: 13px;
+                /* Adjust font size for mobile */
+                padding: 6px 12px;
+                min-width: 120px;
+                /* Ensure it doesn't shrink too small */
+            }
+        }
+
+        /* Default (Web) styles */
+        .locations-container {
+            background-color: aliceblue;
+            width: 100%;
+            height: 100px;
+        }
+
+        .locations-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .location {
+            margin-top: 30px;
+        }
+
+        /* End of Code */
+
+        @media (max-width: 768px) {
+            .locations-header {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: center;
+                /* Center align the items */
+            }
+
+            .location {
+                margin-top: 15px;
+                /* Adjust spacing between items */
+                font-size: 16px;
+                /* Adjust font size */
+            }
+
+            .locations-container {
+                background-color: aliceblue;
+                width: 100%;
+                height: 280px;
+            }
+        }
+
+        /* Responsive styles for max-width 640px */
+        @media (max-width: 640px) {
+            .locations-header {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: center;
+                /* Center align the items */
+            }
+
+            .location {
+                margin-top: 15px;
+                /* Adjust spacing between items */
+                font-size: 16px;
+                /* Adjust font size */
+            }
+
+            .locations-container {
+                background-color: aliceblue;
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+
+        /* Responsive styles for max-width 475px */
+        @media (max-width: 475px) {
+            .locations-header {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: center;
+                /* Center align the items */
+            }
+
+            .location {
+                margin-top: 10px;
+                /* Adjust spacing between items */
+                font-size: 14px;
+                /* Adjust font size */
+            }
+
+            .locations-container {
+                background-color: aliceblue;
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        /* Default (Web) styles */
+        .cards-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* margin-right: 50px;
+            margin-left: 50px; */
+            margin-bottom: 30px;
+        }
+
+        .card {
+            width: 48%;
+            /* Allow cards to take up less than half the container width */
+        }
+
+        .card-content {
+            margin-top: 20px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            align-items: center;
+            /* Aligns text and images in a row */
+        }
+
+        .item img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .item h4 {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* Responsive styles for max-width 640px */
+        @media (max-width: 640px) {
+            .cards-container {
+                flex-direction: column;
+                justify-content: space-around;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .card {
+                width: 100%;
+                /* Cards take up more width on smaller screens */
+                margin-bottom: 20px;
+            }
+
+            .item {
+                margin-bottom: 10px;
+                /* Reduced spacing */
+            }
+
+            .item img {
+                height: 16px;
+                width: 16px;
+                /* Smaller images for smaller screens */
+            }
+
+            .item h4 {
+                font-size: 14px;
+            }
+        }
+
+        /* Responsive styles for max-width 475px */
+        @media (max-width: 475px) {
+            .cards-container {
+                flex-direction: column;
+                /* align-items: center; */
+                justify-content: space-around;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .card {
+                width: 100%;
+                /* Cards take up almost full width */
+                margin-bottom: 15px;
+            }
+
+            .item {
+                margin-bottom: 8px;
+                /* Further reduced spacing */
+            }
+
+            .item img {
+                height: 14px;
+                width: 14px;
+                /* Even smaller images for the smallest screens */
+            }
+
+            .item h4 {
+                font-size: 12px;
+                /* Reduced font size for readability */
+            }
+        }
+
+        /* Default (Web) styles */
+        .cards-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* margin-right: 50px;
+            margin-left: 50px; */
+            margin-bottom: 30px;
+        }
+
+        /* Default (Web) styles for the card */
+        .card {
+            width: 48%;
+            /* Allow cards to take up less than half the container width */
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            margin-right: 30px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for the card */
+
+        /* Responsive styles for max-width 640px */
+
+
+        /* Responsive styles for max-width 475px */
+
+
+        .card-content {
+            margin-top: 20px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            align-items: center;
+            /* Align text and images in a row */
+        }
+
+        .item img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .item h4 {
+            margin-left: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Responsive styles for max-width 640px */
+        @media (max-width: 640px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 80%;
+                /* Cards take up more width on smaller screens */
+                margin-bottom: 20px;
+            }
+
+            .item {
+                margin-bottom: 10px;
+                /* Reduced spacing */
+            }
+
+            .item img {
+                height: 16px;
+                width: 16px;
+                /* Smaller images for smaller screens */
+            }
+
+            .item h4 {
+                font-size: 14px;
+            }
+        }
+
+        /* Responsive styles for max-width 475px */
+        @media (max-width: 475px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                /* Cards take up almost full width */
+                margin-bottom: 15px;
+            }
+
+            .item {
+                margin-bottom: 8px;
+                /* Further reduced spacing */
+            }
+
+            .item img {
+                height: 14px;
+                width: 14px;
+                /* Even smaller images for the smallest screens */
+            }
+
+            .item h4 {
+                font-size: 12px;
+                /* Reduced font size for readability */
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .full-width-card {
+            width: 100%;
+            border-radius: 0;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            box-shadow: 0 24px 24px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .text-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-card {
+            width: 450px;
+            border-radius: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+
+        }
+
+        .form-input {
+            width: 80%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .st-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 80%;
+        }
+
+        .st-color1 {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .st-color1:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .st-color1:active {
+            background-color: #004085;
+            transform: scale(0.98);
+        }
+
+        /**** Responsive Styles ****/
+        @media (max-width: 764px) {
+            .responsive-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .custom-card {
+                width: 90%;
+                margin-left: 0px;
+            }
+
+            .text-section {
+                margin-bottom: 20px;
+            }
+
+            .form-input {
+                width: 90%;
+                font-size: 14px;
+            }
+
+            .st-btn {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .custom-card {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .form-input {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .st-btn {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 465px) {
+            .full-width-card {
+                text-align: center;
+            }
+
+            .custom-card {
+                width: 100%;
+                margin-left: 0px;
+                margin-right: 15px;
+
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .form-input {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .st-btn {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        .container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content img {
+            height: 300px;
+            width: 650px;
+            margin-right: 30px;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content img {
+                height: 250px;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .content p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .content img {
+                height: 200px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 475px) {
+            .content p {
+                font-size: 14px;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .symptoms-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .symptom-column {
+            flex: 1 1 30%;
+            margin: 10px;
+
+        }
+
+        .symptom-column h2 {
+            margin-bottom: 20px;
+        }
+
+        .symptom-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .symptom-item img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .symptom-item h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .symptom-column {
+                flex: 1 1 45%;
+            }
+
+            .symptom-item h4 {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .symptom-column {
+                flex: 1 1 100%;
+            }
+
+            .symptom-item h4 {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 475px) {
+            .symptom-item h4 {
+                font-size: 12px;
+            }
+        }
+
+        /* Base styles */
+        .banner {
+            width: 100%;
+            height: 250px;
+            margin-top: 50px;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner h2 {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Responsive styles for width 475px */
+        @media (max-width: 475px) {
+            .banner {
+                height: 200px;
+                /* Adjust height for smaller screens */
+            }
+
+            .banner h2 {
+                font-size: 16px;
+                /* Adjust font size */
+            }
+        }
+
+        /* Responsive styles for width 640px */
+        @media (max-width: 640px) {
+            .banner {
+                height: 300px;
+                /* Adjust height for medium screens */
+            }
+
+            .banner h2 {
+                font-size: 20px;
+                /* Adjust font size */
+            }
+        }
+
+        /* Responsive styles for width 764px */
+        @media (max-width: 764px) {
+            .banner {
+                height: 350px;
+                /* Adjust height for larger screens */
+            }
+
+            .banner h2 {
+                font-size: 24px;
+                /* Adjust font size */
+            }
+        }
+
+        .custom-button {
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            font-weight: bold;
+            /* Optional: adjust text size */
+            background-color: #fff;
+            /* Optional: button color */
+            color: blue;
+            /* Optional: text color */
+            border: none;
+            /* Optional: removes border */
+            cursor: pointer;
+            /* Optional: change cursor on hover */
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+
+        .sample {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image {
+            width: 100%;
+            height: 550px;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 10px;
+            /* Distance from the top */
+            left: 10px;
+            /* Distance from the left */
+            color: white;
+            text-align: left;
+            /* Align text to the left */
+            padding: 10px;
+            /* Optional: Add padding around the text */
+            border-radius: 5px;
+            /* Optional: Round the corners of the background */
+        }
+
+        .image-containers {
+            position: relative;
+            justify-content: space-around;
+        }
+
+        .images {
+            width: 100%;
+            height: 550px;
+        }
+
+        .text-overlays {
+            position: absolute;
+            top: 10px;
+            /* Distance from the top */
+            left: 10px;
+            /* Distance from the left */
+            color: white;
+            text-align: left;
+            /* Align text to the left */
+            padding: 10px;
+            /* Optional: Add padding around the text */
+            border-radius: 5px;
+            /* Optional: Round the corners of the background */
+        }
+
+        @media (max-width: 764px) {
+            .image-containers {
+                height: 500px;
+                justify-content: space-around;
+            }
+
+        }
+
+        @media (max-width: 640px) {
+            .image-containers {
+                height: 500px;
+                justify-content: space-around;
+            }
+
+        }
+
+        @media (max-width: 470px) {
+            .image-containers {
+                height: 500px;
+                display: flex;
+                justify-content: space-around;
+            }
+
+        }
+
+
+
+
+        @media (max-width: 764px) {
+            .sample {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+
+        @media (max-width: 640px) {
+            .sample {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+
+        @media (max-width: 475px) {
+            .sample {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+
+            }
+
+            /* General Styling */
+            .text-overlay {
+                margin-top: 30px;
+                color: #fff;
+            }
+
+            .text-overlay h2 {
+                font-size: 24px;
+                /* Default for larger screens */
+                margin-bottom: 20px;
+            }
+
+            .text-overlay h4 {
+                font-size: 18px;
+                /* Default for larger screens */
+                margin-left: 20px;
+            }
+
+            .text-overlay i {
+                margin-top: 5px;
+                font-size: 18px;
+                /* Icon size default */
+                color: #fff;
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 764px) {
+                .text-overlay h2 {
+                    font-size: 22px;
+                    /* Adjust header size */
+                }
+
+                .text-overlay h4 {
+                    font-size: 16px;
+                    /* Adjust subheader size */
+                }
+
+                .text-overlay i {
+                    font-size: 16px;
+                    /* Adjust icon size */
+                }
+            }
+
+            @media (max-width: 640px) {
+                .text-overlay h2 {
+                    font-size: 20px;
+                    /* Slightly smaller for smaller screens */
+                }
+
+                .text-overlay h4 {
+                    font-size: 14px;
+                    /* Reduce text size further */
+                }
+
+                .text-overlay i {
+                    font-size: 14px;
+                    /* Adjust icon size */
+                }
+            }
+
+            @media (max-width: 470px) {
+                .text-overlay h2 {
+                    font-size: 18px;
+                    /* Compact header size */
+                }
+
+                .text-overlay h4 {
+                    font-size: 12px;
+                    /* Compact subheader size */
+                }
+
+                .text-overlay i {
+                    font-size: 12px;
+                    /* Compact icon size */
+                }
+            }
+
+            /* Default background color */
+            .image-container {
+                background-color: transparent;
+            }
+
+            /* Blue background for specific viewports */
+            @media (max-width: 470px) {
+                .image-container {
+                    background-color: blue;
+                    height: 400px;
+                    margin-top: 30px;
+                }
+
+                .image {
+                    width: 100%;
+                    height: 400px;
+                }
+            }
+
+            @media (max-width: 640px) {
+                .image-container {
+                    background-color: blue;
+                    height: 400px;
+                    margin-top: 30px;
+                }
+
+                .image {
+                    width: 100%;
+                    height: 400px;
+
+                }
+            }
+
+            @media (max-width: 764px) {
+                .image-container {
+                    background-color: blue;
+                    height: 400px;
+                    margin-top: 30px;
+                }
+
+                .image {
+                    width: 100%;
+
+                }
+            }
+
+
+            #call_now_button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white !important;
+                background-color: #28a745 !important;
+                border: none;
+                border-radius: 5px;
+                text-align: center;
+                cursor: pointer;
+            }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="assets/Avis_Logo-01.png" alt="Logo">
+            </div>
+            <!-- Action Section -->
+            <div style="display: flex; flex-direction: row; margin-top: 10px;">
+                <a href="tel:+1234567890" style="text-decoration: none;">
+                    <button class="st-btn"
+                        style="background-color: #00FFFF; color: white; margin-bottom: 20px; border: none; cursor: pointer; width: 200px;"
+                        type="button" id="submit">
+                        Call Now
+                    </button>
+                </a>
+                <div id="google_element" style="margin-top: 5px; margin-left: 10px;"> </div>
+
+            </div>
+
+
+
+
+            <!-- Hidden Google Translate Element (this div will be used by Google Translate API) -->
+
+        </div>
+        <div class="sample" style="margin-top: 30px; margin-bottom: 20px; ">
+            <div class="image-container">
+                <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image"
+                    style="height: 520px; border-radius: 15px;">
+                <div class="text-overlay" style="margin-top: 30px;">
+                    <h2 style="color: #fff;">Best Hospital for Varicose Veins <br>Treatment in Hyderabad.</h2>
+                    <div style="display: flex; flex-direction: row; margin-top: 15px;">
+                        <i aria-hidden="true" class="far fa-arrow-alt-circle-right" style="margin-top: 5px;"></i>
+                        <h4 style="color: #fff; margin-left: 20px;">45 Minutes Painless Treatments.</h4>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 15px;">
+                        <i aria-hidden="true" class="far fa-arrow-alt-circle-right style=" margin-top: 5px;"></i>
+                        <h4 style="color: #fff; margin-left: 20px;">All Major Insurance Accepted.</h4>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 15px;">
+                        <i aria-hidden="true" class="far fa-arrow-alt-circle-right style=" margin-top: 5px;"></i>
+                        <h4 style="color: #fff; margin-left: 20px;">Non-Surgical USFDA Approved Procedures.</h4>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 15px;">
+                        <i aria-hidden="true" class="far fa-arrow-alt-circle-right style=" class="text" ;"></i>
+                        <h4 style="color: #fff; margin-left: 20px;">Same Day Discharge..</h4>
+                    </div>
+                    <button class="st-btn"
+                        style="background-color: #00FFFF; color: white; margin-top: 20px; border: none; cursor: pointer; width: 200px;"
+                        type="submit" id="submit">
+                        Call Now
+                    </button>
+
+                </div>
+            </div>
+            <div class="image-containers">
+                <img src="./assets/banner15.jpeg." alt="Varicose Veins Treatment" class="image" style="height: 520px; ">
+                <div class="text-overlays">
+                    <div class="responsive-container">
+                        <div class="text-section">
+                            <h2 style="text-align: center;">Book Now </h2>
+                        </div>
+                        <div class="custom-card" style="height: 350px; margin-right: 10px; margin-top: 20px;">
+                            <div class="st-vertical-middle-in">
+                                <form method="POST"
+                                    action="https://script.google.com/macros/s/AKfycbxFaNJKWny0BenqNJLFzCTz4w7TNc_PRIbJEQMvZDUQndgMrfkOs10oYSj1fRRmvonzIg/exec"
+                                    name="contact-form">
+
+                                    <div class="row" style="margin-left: 3px;">
+                                        <input type="text" name="your-name" placeholder="Full Name" class="form-input"
+                                            required style="color: #ccc">
+                                        <input type="text" name="your-number" placeholder="Phone Number"
+                                            class="form-input" required style="color: #ccc;">
+                                        <select name="your-email" class="form-input" required
+                                            style="background-color: #fff; color: #ccc;">
+                                            <option value="" disabled selected>Enter Location</option>
+                                            <option value="Kukatpally">Kukatpally</option>
+                                            <option value="Jubliee Hills">Jubliee Hills</option>
+                                            <option value="GachiBowli">GachiBowli</option>
+
+                                        </select>
+
+                                        <input name="udate" type="text" placeholder="Booking Date" class="form-input"
+                                            style="color: #ccc;">
+
+                                        <button class="st-btn st-color1" type="submit" id="submit"
+                                            style="background-color: #00FFFF;">
+                                            Book Appointment
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+    <div style="background-color: aliceblue; width: 100%; height: 100px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 30px;">
+            <h2 style="margin-top: 30px;">Jubilee Hills </h2>
+            <h2 style="margin-top: 30px; margin-left: 25px;">Kukatpally
+            </h2>
+            <h2 style="margin-top: 30px;">GachiBowli</h2>
+        </div>
+
+    </div>
+    <div style="margin-left: 30px; ">
+        <h2 style="color:  #2B388F; margin-top: 40px; text-align: center;">25% of Indians Have Varicose Veins!</h2>
+        <div class="cards-container">
+            <div class="card" style="background-color: #EDF3F4;">
+                <div class="card-content">
+                    <h3 style="color: #2B388F;">What Causes Varicose Veins?</h3>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Age</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Family History</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Sitting or Standing for Long Time</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Pregnancy</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Obesity</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="background-color: #EDF3F4;">
+                <div class="card-content">
+                    <h3 style="color: #2B388F" ;>What Happens If You Delay Treatment?</h3>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Swelling and Skin Changes from Poor Circulation</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Painful Ulcers That Heal Slowly</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Gangrene That Requires Removal of Toes or Entire Leg</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Blood Clots That Can Cause Death</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-left: 30px; ">
+        <h2 style="color:  #2B388F; margin-top: 40px; text-align: center;">India’s Only Hospital for End-to-End Vein
+            Care.
+        </h2>
+        <div class="cards-container">
+            <div class="card" style="background-color: #EDF3F4;">
+                <div class="card-content">
+                    <h3 style="color: #2B388F">The Choice of 40,000+ Satisfied Patients for Our:</h3>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>USFDA Approved Procedures.
+
+                        </h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Doctors With 30+ Years Experience.</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>98% Success Rate.</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>100% Best Price Assurance.</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Fast Treatment, No Hospitalisation.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="background-color: #EDF3F4;">
+                <div class="card-content">
+                    <h3 style="color: #2B388F">Stress-Free Insurance Assistance:
+
+                    </h3>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>All Major Insurances Accepted.</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>No Hidden Charges.</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Complete Paperwork Assistance.</h4>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/arrow.png" alt="Age">
+                        <h4>Cashless Treatment Available (Depending on Policy).</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="full-width-card">
+        <!-- Content inside the card -->
+        <div class="responsive-container">
+            <div class="text-section">
+                <h2 style="color: #2B388F">Book Now</h2>
+            </div>
+            <div class="custom-card" style="height: 400px;">
+                <div class="st-vertical-middle-in">
+                    <form method="POST"
+                        action="https://script.google.com/macros/s/AKfycbxFaNJKWny0BenqNJLFzCTz4w7TNc_PRIbJEQMvZDUQndgMrfkOs10oYSj1fRRmvonzIg/exec"
+                        name="contact-form">
+
+                        <div class="row">
+                            <input type="text" name="your-name" placeholder="Full Name" class="form-input" required>
+                            <input type="text" name="your-number" placeholder="Phone Number" class="form-input"
+                                required>
+                            <input type="text" name="your-email" placeholder="Enter Location" class="form-input"
+                                required>
+                            <input name="udate" type="text" placeholder="Booking Date" class="form-input">
+
+                            <button class="st-btn st-color1" type="submit" id="submit"
+                                style="background-color: #00FFFF;">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <h2 style="color: #2B388F">What are Vericose Veins ?</h2>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img src="assets/viens.jpeg" alt="Varicose Veins Illustration">
+            <p>
+                All veins have valves to prevent the blood from flowing in reverse.
+                When these valves get damaged, the veins become large and twisted due to the
+                pressure of the backward-moving blood. Such damaged veins are called varicose veins.<br><br>
+
+                Varicose veins are dangerous to neglect. If your damaged veins are not closed with the correct
+                treatment,
+                the pressure of the backward-flowing blood damages the healthy veins as well.
+                The longer you avoid treatment, the worse your condition will become.
+                There’s also a risk of the veins bursting open and causing major blood loss..<br><br>
+                Consult at Avis Hospitals, the best varicose veins hospital in Hyderabad,
+                and the only facility that provides end-to-end vein care.
+            </p>
+        </div>
+    </div>
+    <div class="symptoms-container">
+        <div class="symptom-column">
+            <h2 style="color: #2B388F">Symptoms</h2>
+
+            <div class="symptom-item" style="margin-bottom: 20px;">
+                <img src="data:image/png;base64,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"
+                    style="width: 15px; height: 15px;" alt="Symptom icon">
+                <h4>Sensations of irritation, burning or itching.
+                </h4>
+            </div>
+
+            <div class="symptom-item" style="margin-bottom: 20px;">
+                <img src="data:image/png;base64,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"
+                    style="width: 15px; height: 15px;" alt="Symptom icon">
+                <h4>Swelling of the legs.
+                </h4>
+            </div>
+            <div class="symptom-item" style="margin-bottom: 20px;">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAZlBMVEUhlvP////6+vr9/PoAj/IAjfIVk/MAivIGkfPm8v3///qTxvh/uvdnsfYjmPP1+v5Jo/Rbq/U3nPOt0frF4PvR5vze7f1Op/WdyvnK4fnv9/6Cvfe11vq93Puizvk9oPSOwPZ0tPXCvTl8AAAGNklEQVR4nNWc22KzKhCF8YQYY1Q8tSapv+//khs1JkZAAUXZ66oXbfNlOQ7DaYC1RXVZ5Fl4jaoG3wC44aaKrmGWF2W96d8CdaBnGFUYui6CEIKXyI/IdSFOovCpDqYGVT7uN99DHxhKEHk+uD/Ko6CCLMUu4uJMhFyc/gX6oYK/ynf5BtGOuX6VyfolB1W0WIZo5MJtoQsqfiS+0FOjhfzkEWuAirNmIa7X7UJNJowlCBU/Gk+daJCHRbHEoPIEbXDp7RZM8t2gysjfAanH8iKRN1EAKgSK4c0SAj87QBXJ5mD6lpus5ocVqDgEOz25jyAIVwJ+GSqIdrZpkBctjz2LUL97RtNUEPyqQv3s/uQmWKESVHx19TGReL/yA4sLZaeaHt0olNqyUGWi8dkNggkvkXKgaqydiVBhTsXMhiqOYOqo2HmUCVVjzfE0CrG9YkGVx/jUCWJWXDGgbP0xPqFKGO8gDRWnBzIRqpTOVzTU9aB4GoWu61Ch1jzOkktVWHOo30Of3SA4H51nUMHxSJ2CJag4OjigBsEoXoAKtdR06/JCPlRxDlKnggcVH5k1vwUTHtTx2eCjr7wwgSpP86lXyYQ6580bhSIWVO6fyQSAn9NQJ0b5IJjEFFR2MhOhyuZQ8XGFHRcKxzOo7KRcPpWXfUPVzdlEnZr4C+px+sPrhB5fUGe/eoPGwWaAKk7OUaP8YgLVHpHMBVa8UfuBCrB+JM9vEri6oIuDN1SmvTyAzfNCVK5N39zsDVXpDnOYBBebyLHvy/kQViNUoDvMUXVx7F7OpV02wA9eUH+anx6s6hcToVopud2/F5TmeTpMLm8m274sp0SYDlCl3ncPpvWEyb5EyxZ0yzAE6qH16aHKmTIRqOWciJ491F1n5kTfPpGgapadQvceSiMS8cmeMa0uVtw6qFpjQqB9sldCiiSFmkA99ZV3kPLJua8GsJcTqFBbSEHap7vAoBwSqFU/lZmqmPJJIFRgZIFa18Cn5lOXa2ugK3Uihk9i0YtLUOgxCqU0k2DwwgLkWvI5w6d/om+5mwMtBR6kfRLfPXQzIJcRxE6WTGuV0Sfx745CcBWPKQibKhU48cKIp1YiQ8MrEE9TCD+DOA5yvPKlKZ9s8Xjq/z4CwmkKRXFXhDjOyuYySqmxpZWKW1gB0UUEiMfv7zjpwocwfJJdCG+AaO6Ez0+dbfO9osfgi5xPRBjcRH8z+HwYKUA4H0T7dJGKp16iSAAkImkHpc62eNoCxfEKMd47hdx8U3p8HK/mcwTJ/DSBUgj04QOpHS/KJ6k8PhFWSAkcrxg+XdUq7UYiebbzl/3LK7qmc/6pFdokeYoPM+7S0A8ZPilOk8gwIzEgo3ZO9faKrgtsRZ/6AVmmdHF5wxo951SNJ9CXLlJFHsOrbrmUMUdQ9qkv8uTKYWbK3tWnvhyWnDi4DK8Yc6ktNTaZOMhOsWivYtW5FEdkiiU9GaXjau7TthOG5EVWmLZTXs0Q5WuVb6hIaYGjK4y5TPbWU0X9AofCUpAb8bza7NNrKUhl0QxyvCK5YPPCUr9oZokXeh8hplfEp+3Lgjf1hViWV3v4NC7Eqi1ZM7zaHk/gvWStuEI190ppjkDrtbivug0yewd38em9DaK8YTRdyFCYczLVb/ht2lpD7eiVc1GbI1B6b62pb0KitO43Fy+20lyK1mcTcsN2LUr6bdjfpSUPGU22azdsbEPPTRrk7bWaO9nY3nYEYMtltpmmRwDMPCyhf79dSEOYG3YABz6/oGITjyoZeajLzONvRh4UNPNIpZWfHFUe4/DpQSe7uHol8zlUeSYT70Cz9WPg0e8zzzDyD8kbeZ2APEADL15YsbaTE4tavqJi5GUeM689mXlBzMyrdGZeOrTs5ECvBK9nkkFw5SzfnkyiF1nNvPLbXY4+hErqcnR3EeMAKo5P/68L92a2JiD5atu2z5qUmjhYRra7sMxsDGJmCxUS7j/mNZuxurY8O9cy29vydPoxr4ERUdnu1+qp3anVk9U1xdpjtXXXplhW19EMG9c+zDKy0VqPZV5Lul7mNe/rFWQKbQ5l2y/qbQiJjmkIOah8rrTOhF3rTHh/HtY686U6D9ulJqP50U1GR8V62rH+BywSXM5wVItpAAAAAElFTkSuQmCC"
+                    style="width: 15px; height: 15px;" alt="Symptom icon">
+                <h4>Changes in skin colour or texture.
+                </h4>
+            </div>
+            <div class="symptom-item" style="margin-bottom: 20px;">
+                <img src="data:image/png;base64,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"
+                    style="width: 15px; height: 15px;" alt="Symptom icon">
+                <h4>Ulcers that take a long time to heal.
+                </h4>
+            </div>
+        </div>
+
+        <div class="symptom-column">
+            <h2 style="color: #2B388F">Treatments</h2>
+            <div class="symptom-item">
+
+                <h4 ">Oils, creams and patches are popular, but unproven remedies for varicose veins. Only a qualified specialist can provide the best treatment for varicose veins. We provide several minimally invasive treatments like:
+                </h4>
+               
+            </div>
+            <div class=" symptom-item">
+                    <img src="data:image/png;base64,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"
+                        style="width: 15px; height: 15px;" alt="Symptom icon">
+                    <h4>Radiofrequency Ablation (RFA)
+
+
+                    </h4>
+            </div>
+            <div class="symptom-item">
+                <img src="data:image/png;base64,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"
+                    style="width: 15px; height: 15px;" alt="Symptom icon">
+                <h4>Endovenous Ablation Therapy (EVLT)
+                </h4>
+            </div>
+            <div class="symptom-item">
+                <img src="data:image/png;base64,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"
+                    style="width: 15px; height: 15px;" alt="Symptom icon">
+                <h4>Cryo Laser & Cryo Sclerotherapy (CLaCS) </h4>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="st-faq-wrap st-shape-wrap" id="faq"
+        style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 100%;">
+        <h2 class="st-accordian-heading"
+            style="font-size: 24px; margin-bottom: 20px; text-align: center; color:  #2B388F;">
+            Frequently Asked Questions</h2>
+        <div class="container" style="width: 100%; max-width: 800px; padding: 20px;">
+
+            <div class="st-accordian-wrap">
+
+                <div class="st-accordian active" style="margin-bottom: 15px;">
+                    <div class="st-accordian-title"
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        What are the risks of varicose veins treatment?
+                        <span class="st-accordian-toggle fa fa-angle-down"></span>
+                    </div>
+                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: block;">
+                        Our varicose veins treatments are quite safe and are performed by experienced doctors. However, in rare cases, the treatment can cause nerve damage and infections.
+                    </div>
+                </div>
+
+                <div class="st-accordian" style="margin-bottom: 15px;">
+                    <div class="st-accordian-title"
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        What is the recovery time for varicose veins treatment?
+                        <span class="st-accordian-toggle fa fa-angle-down"></span>
+                    </div>
+                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                        At our varicose hospital, patients begin walking within a few hours of treatment and can return home on the same day. You can expect to make a full recovery within a few weeks.
+                    </div>
+                </div>
+
+                <div class="st-accordian" style="margin-bottom: 15px;">
+                    <div class="st-accordian-title"
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        How to prepare for varicose veins treatment?
+                        <span class="st-accordian-toggle fa fa-angle-down"></span>
+                    </div>
+                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                        Communicate all of your concerns with our doctors. Make sure you inform them about all the medicines you are taking. Eat a healthy diet, drink plenty of water and stop smoking at least a week before your treatment.
+                    </div>
+                </div>
+
+                <div class="st-accordian" style="margin-bottom: 15px;">
+                    <div class="st-accordian-title"
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        Is the ultrasound doppler screening free at Avis Hospitals?
+                        <span class="st-accordian-toggle fa fa-angle-down"></span>
+                    </div>
+                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                        The doppler test for varicose veins cost is ₹4500, but you can get it for free at our varicose veins hospital. The doppler screening is free only for the first consultation, and is only conducted if the doctor deems it necessary for diagnosis. 
+                    </div>
+                </div>
+
+                <div class="st-accordian" style="margin-bottom: 15px;">
+                    <div class="st-accordian-title"
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;"">
+                        What to do to prevent varicose veins?
+                        <span class=" st-accordian-toggle fa fa-angle-down"></span>
+                    </div>
+                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                        Varicose veins cannot be avoided completely, especially if your family has a history of the issue. However, exercising daily, avoiding long periods of sitting or standing and a healthy diet can slow down the development of varicose veins. 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div
+            style="height: 250px; width: 100%; background-color:  #2B388F; margin-top: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h3 style="color: white;">Consult at India’s Best Varicose Veins Hospital.</h3>
+            <div>
+                <a href="tel:+1234567890" style="text-decoration: none;">
+                    <button class="st-btn"
+                        style="background-color: #00FFFF; color: white; margin-bottom: 20px; border: none; cursor: pointer; width: 200px;"
+                        type="button" id="submit">
+                        Talk to Our Experts
+                    </button>
+                </a>
+                <button class="st-btn"
+                    style="background-color: #00FFFF; color: white; padding: 10px 20px; border: none; cursor: pointer; width: 200px;"
+                    type="submit" id="submit">
+                    Book Your Appointment
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <h6 style="color: gray;">Copyrights Reserved to Avis Vascular Center 2024</h6>
+    </div>
+
+
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.st-accordian-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const parent = title.parentElement;
+                const body = parent.querySelector('.st-accordian-body');
+                const isActive = parent.classList.contains('active');
+
+                // Close all accordions
+                document.querySelectorAll('.st-accordian').forEach(acc => {
+                    acc.classList.remove('active');
+                    acc.querySelector('.st-accordian-body').style.display = 'none';
+                });
+
+                // Toggle current accordion
+                if (!isActive) {
+                    parent.classList.add('active');
+                    body.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Default language of your page
+                includedLanguages: 'en,te,hi',  // Languages you want to support (English, Telugu, Hindi)
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,  // Simple layout without toolbar
+                autoDisplay: false  // Disable automatic display of Google Translate toolbar
+            }, 'google_element');
+        }
+
+        // Listen for language changes in the dropdown
+        document.getElementById('languages').addEventListener('change', function () {
+            var language = this.value;
+            google.translate.TranslateElement.prototype.hidePopup(); // Hide Google Translate popup if it's open
+            google.translate.TranslateElement.prototype.translatePage(language, 'en'); // Translate the page
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
