@@ -1142,7 +1142,7 @@
                                             required style="color: #ccc">
                                         <input type="text" name="your-number" placeholder="Phone Number"
                                             class="form-input" required style="color: #ccc;">
-                                        <select name="your-email" class="form-input" required
+                                        <select type ="text" name="your-email" class="form-input" required
                                             style="background-color: #fff; color: #ccc;">
                                             <option value="" disabled selected>Enter Location</option>
                                             <option value="Kukatpally">Kukatpally</option>
@@ -1306,19 +1306,28 @@
                         action="https://script.google.com/macros/s/AKfycbxFaNJKWny0BenqNJLFzCTz4w7TNc_PRIbJEQMvZDUQndgMrfkOs10oYSj1fRRmvonzIg/exec"
                         name="contact-form">
 
-                        <div class="row">
-                            <input type="text" name="your-name" placeholder="Full Name" class="form-input" required>
-                            <input type="text" name="your-number" placeholder="Phone Number" class="form-input"
-                                required>
-                            <input type="text" name="your-email" placeholder="Enter Location" class="form-input"
-                                required>
-                            <input name="udate" type="text" placeholder="Booking Date" class="form-input">
+                        <div class="row" style="margin-left: 3px;">
+                                        <input type="text" name="your-name" placeholder="Full Name" class="form-input"
+                                            required style="color: #ccc">
+                                        <input type="text" name="your-number" placeholder="Phone Number"
+                                            class="form-input" required style="color: #ccc;">
+                                        <select type ="text" name="your-email" class="form-input" required
+                                            style="background-color: #fff; color: #ccc;">
+                                            <option value="" disabled selected>Enter Location</option>
+                                            <option value="Kukatpally">Kukatpally</option>
+                                            <option value="Jubliee Hills">Jubliee Hills</option>
+                                            <option value="GachiBowli">GachiBowli</option>
 
-                            <button class="st-btn st-color1" type="submit" id="submit"
-                                style="background-color: #00FFFF;">
-                                Book Appointment
-                            </button>
-                        </div>
+                                        </select>
+
+                                        <input name="udate" type="text" placeholder="Booking Date" class="form-input"
+                                            style="color: #ccc;">
+
+                                        <button class="st-btn st-color1" type="submit" id="submit"
+                                            style="background-color: #00FFFF;">
+                                            Book Appointment
+                                        </button>
+                                    </div>
                     </form>
                 </div>
             </div>
