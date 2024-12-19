@@ -1218,6 +1218,85 @@
                     display: none;
                 }
             }
+
+            /* Modal Styles */
+            .modal {
+                display: flex;
+                justify-content: center;
+                /* Hidden by default */
+                position: fixed;
+                z-index: 1000;
+                /* Ensure it is on top */
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                /* Dim the background */
+                overflow: hidden;
+                /* Prevent scrolling */
+            }
+
+            .modal-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                width: 90%;
+                max-width: 400px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 1010;
+                display: flex;
+                justify-content: center;
+                /* Ensure it's above the overlay */
+            }
+
+            body.modal-open {
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                /* Prevent body scroll when modal is open */
+            }
+
+
+
+
+
+
+            .close-btn {
+                color: #aaa;
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                cursor: pointer;
+            }
+
+            .close-btn:hover,
+            .close-btn:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .close-btn {
+                color: #aaa;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: -2px;
+                /* Adjust as needed */
+            }
+
+            .close-btn:hover,
+            .close-btn:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
     </style>
 </head>
 
@@ -1231,19 +1310,19 @@
             <!-- Action Section -->
             <div class="action-section">
                 <a href="tel:+1234567890" class="call-now" ">
-                    <button class=" st-btn" type="button" id="submit"  style="width: 200px;">Call Now</button>
+                    <button class=" st-btn" type="button" id="submit" style="width: 200px; font-size: 18px;">Call Now</button>
                 </a>
                 <div id="google_element" class="google-translate"></div>
             </div>
         </div>
 
 
-        <div class="sample" style="margin-top: 30px;  ">
+        <div class="sample" style="margin-top: 10px;  ">
             <div class="image-container">
                 <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image"
-                    style="height: 430px; width: 100%; ">
-                <div class="text-overlay" style="margin-top: 30px;">
-                    <h2 style="color: #fff; margin-left: 30px;">Best Hospital for Varicose Veins <br>Treatment in
+                    style="height: 470px; width: 100%; ">
+                <div class="text-overlay" style="margin-top: 30px;  ">
+                    <h2 style="color: #fff; ">Best Hospital for Varicose Veins Treatment in
                         Hyderabad.</h2>
                     <div style="display: flex; flex-direction: row; margin-top: 15px;">
                         <i aria-hidden="true" class="far fa-arrow-alt-circle-right"
@@ -1271,7 +1350,7 @@
                     <div style="display: flex; justify-content: center; margin-left: 40px; width: 60%;">
                         <a href="tel:+1234567890">
                             <button class="st-btn"
-                                style="background-color: #2B388F; color: white; margin-top: 20px; border: none; cursor: pointer; width: 300px;"
+                                style="background-color:  #2B388F; color: white; margin-top: 20px; margin-left: 40px; font-size: 18px; border: none; cursor: pointer; width: 200px;"
                                 type="submit" id="submit">
                                 Call Now
                             </button>
@@ -1285,10 +1364,10 @@
             </div>
             <div class="image-containers">
                 <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image"
-                    style="height: 430px; width: 100%; ">
+                    style="height: 470px; width: 100%; ">
                 <div class="text-overlays">
                     <div class="responsive-container">
-                        <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 5px;">
+                        <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 30px;">
                             <div class="st-vertical-middle-in">
                                 <div class="text-section">
                                     <h4 style="text-align: center; color: #2B388F;">Book Now</h4>
@@ -1316,7 +1395,7 @@
                                         <input name="udate" type="text" placeholder="Booking Date" class="form-input"
                                             style="color: #ccc;">
                                         <button class="st-btn st-color1" type="submit" id="submit"
-                                            style="background-color: #2B388F;">
+                                            style="background-color: #2B388F; font-size: 18px;">
                                             Book Appointment
                                         </button>
                                     </div>
@@ -1338,16 +1417,16 @@
 
 
     </div>
-    <div style="background-color: aliceblue; width: 100%; height: 70px;">
-        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
-            <h2 style="margin-top: 30px; color:  #2B388F">Jubilee Hills </h2>
-            <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F">Kukatpally
+    <div style="background-color: aliceblue; width: 100%; height: 70px; margin-top: 30px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-around; ">
+            <h2 style="margin-top: 30px; color:  #2B388F; text-align: center;">Jubilee Hills </h2>
+            <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F" ;text-align: center;>Kukatpally
             </h2>
-            <h2 style="margin-top: 30px; color:  #2B388F">GachiBowli</h2>
+            <h2 style="margin-top: 30px; color:  #2B388F" ;text-align: center;>GachiBowli</h2>
         </div>
     </div>
     <div style="background-color: aliceblue; width: 100%; height: 70px;">
-        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
+        <div style="display: flex; flex-direction: row; justify-content: space-around; ">
             <h2 style="margin-top: 30px; color:  #2B388F">Vijayawada </h2>
             <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F">Rajamundry
             </h2>
@@ -1355,7 +1434,7 @@
         </div>
     </div>
     <div style="background-color: aliceblue; width: 100%; height: 70px;">
-        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
+        <div style="display: flex; flex-direction: row; justify-content: space-around; ">
             <h2 style="margin-top: 30px; color:  #2B388F">Kadapa </h2>
             <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F">Kurnool
             </h2>
@@ -1364,63 +1443,70 @@
     </div>
 
     <div style="margin-left: 30px; ">
-        <h2 style="color: #2B388F; margin-top: 40px; text-align: center; font-size: 24px;" class="responsive-heading">
+        <h1 style="color: #2B388F; margin-top: 30px; text-align: center; color: red;" class="responsive-heading">
             25% of Indians Have Varicose Veins!
-        </h2>
+        </h1>
         <div class="cards-container">
             <div class="card" style="background-color: #EDF3F4;">
                 <div class="card-content">
                     <h3 style="color: #2B388F;">What Causes Varicose Veins?</h3>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Age</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Age</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Family History</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Family History</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Sitting or Standing for Long Time</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Sitting or Standing for Long
+                            Time</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Pregnancy</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Pregnancy</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Obesity</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Obesity</h4>
                     </div>
                 </div>
             </div>
             <div class="card" style="background-color: #EDF3F4;">
                 <div class="card-content">
-                    <h3 style="color: #2B388F" ;>What Happens If You Delay Treatment?</h3>
+                    <h3 style="color: #2B388F;">What Happens If You Delay Treatment??</h3>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Swelling and Skin Changes from Poor Circulation</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Swelling and Skin Changes
+                            from Poor Circulation</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Painful Ulcers That Heal Slowly</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Painful Ulcers That Heal
+                            Slowly</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Gangrene That Requires Removal of Toes or Entire Leg</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Gangrene That Requires
+                            Removal of Toes or Entire Leg</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Blood Clots That Can Cause Death</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Blood Clots That Can Cause
+                            Death</h4>
                     </div>
+
                 </div>
             </div>
+
         </div>
 
     </div>
     <div style="margin-left: 30px; ">
-        <h2 style="color: #2B388F; margin-top: 40px; text-align: center; font-size: 24px;" class="responsive-heading">
+        <h1 style="color: red; margin-top: 40px; text-align: center; " class="responsive-heading">
             India’s Only Hospital for End-to-End Vein Care.
-        </h2>
+        </h1>
 
         <div class="cards-container">
             <div class="card" style="background-color: #EDF3F4;">
@@ -1428,25 +1514,28 @@
                     <h3 style="color: #2B388F">The Choice of 40,000+ Satisfied Patients for Our:</h3>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>USFDA Approved Procedures.
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">USFDA Approved Procedures.
 
                         </h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Doctors With 30+ Years Experience.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Doctors With 30+ Years
+                            Experience.</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>98% Success Rate.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">98% Success Rate.</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>100% Best Price Assurance.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">100% Best Price Assurance.
+                        </h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Fast Treatment, No Hospitalisation.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Fast Treatment, No
+                            Hospitalisation.</h4>
                     </div>
                 </div>
             </div>
@@ -1457,19 +1546,22 @@
                     </h3>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>All Major Insurances Accepted.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">All Major Insurances
+                            Accepted.</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>No Hidden Charges.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">No Hidden Charges.</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Complete Paperwork Assistance.</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Complete Paperwork
+                            Assistance.</h4>
                     </div>
                     <div class="item">
                         <img src="./assets/arrow_icon.png" alt="Age">
-                        <h4>Cashless Treatment Available (Depending on Policy).</h4>
+                        <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Cashless Treatment Available
+                            (Depending on Policy).</h4>
                     </div>
                 </div>
             </div>
@@ -1477,11 +1569,12 @@
 
     </div>
 
-    <div class="full-width-card">
+    <div class="full-width-card" id="book">
         <!-- Content inside the card -->
         <div class="responsive-container">
 
-            <h2 style="color:  #2B388F ; display: flex;   align-items: center;">Book Your Appointment Today </h2>
+            <h2 style="color:  #2B388F ; display: flex; font-size: 28px;   align-items: center;">Book Your
+                <br>Appointment Today </h2>
 
             <div class="responsive-container">
                 <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 5px;">
@@ -1517,7 +1610,7 @@
         </div>
     </div>
     <div style="text-align: center; margin-top: 40px;">
-        <h2 style="color: #2B388F ">What are Vericose Veins ?</h2>
+        <h2 style="color: #2B388F;  font-size: 28px;">What are Vericose Veins ?</h2>
     </div>
     <div class="container">
         <div class="content">
@@ -1539,75 +1632,79 @@
     </div>
     <div class="symptoms-container">
         <div class="symptom-column">
-            <h2 style="color: #2B388F">Symptoms</h2>
+            <h2 style="color: #2B388F; font-size: 28px;">Symptoms</h2>
 
-            <div class="symptom-item" ">
+            <div class="symptom-item" style="margin-bottom: 20px;">
                 <img src=" ./assets/right_mark.png" alt="Symptom icon">
-                <h4>Sensations of irritation, burning or itching.
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Sensations of irritation, burning or
+                    itching.
                 </h4>
             </div>
 
             <div class="symptom-item" style="margin-bottom: 20px;">
                 <img src="./assets/right_mark.png" alt="Symptom icon">
-                <h4>Swelling of the legs.
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Swelling of the legs.
                 </h4>
             </div>
             <div class="symptom-item" style="margin-bottom: 20px;">
                 <img src="./assets/right_mark.png" alt="Symptom icon">
-                <h4>Changes in skin colour or texture.
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Changes in skin colour or texture.
                 </h4>
             </div>
             <div class="symptom-item" style="margin-bottom: 20px;">
                 <img src="./assets/right_mark.png" alt="Symptom icon">
-                <h4>Ulcers that take a long time to heal.
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Ulcers that take a long time to heal.
                 </h4>
             </div>
         </div>
 
         <div class="symptom-column">
-            <h2 style="color: #2B388F">Treatments</h2>
-            <div class="symptom-item">
+            <h2 style="color: #2B388F; font-size: 28px;">Treatments</h2>
+            <div class="symptom-item" style="margin-bottom: 20px;>
 
-                <h4 ">Oils, creams and patches are popular, but unproven remedies for varicose veins. Only a qualified specialist can provide the best treatment for varicose veins. We provide several minimally invasive treatments like:
+                <h4 style=" font-size: medium; font-family: 'Poppins' , sans-serif">Oils, creams and patches are
+                popular, but unproven remedies for varicose veins. Only a qualified specialist can provide the best
+                treatment for varicose veins. We provide several minimally invasive treatments like:
                 </h4>
-               
+
             </div>
             <div class=" symptom-item">
-                    <img src="./assets/right_mark.png" alt="Symptom icon">
-                    <h4>Radiofrequency Ablation (RFA)
-
-
-                    </h4>
-            </div>
-            <div class="symptom-item">
                 <img src="./assets/right_mark.png" alt="Symptom icon">
-                <h4>Endovenous Ablation Therapy (EVLT)
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Radiofrequency Ablation (RFA)
+
+
                 </h4>
             </div>
             <div class="symptom-item">
                 <img src="./assets/right_mark.png" alt="Symptom icon">
-                <h4>Cryo Laser & Cryo Sclerotherapy (CLaCS) </h4>
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Endovenous Ablation Therapy (EVLT)
+                </h4>
+            </div>
+            <div class="symptom-item">
+                <img src="./assets/right_mark.png" alt="Symptom icon">
+                <h4 style="font-size: medium; font-family: 'Poppins', sans-serif;">Cryo Laser & Cryo Sclerotherapy
+                    (CLaCS) </h4>
             </div>
         </div>
 
 
     </div>
     <div class="st-faq-wrap st-shape-wrap" id="faq"
-        style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 100%;">
-        <h2 class="st-accordian-heading"
-            style="font-size: 24px; margin-bottom: 20px; text-align: center; color:  #2B388F;">
+        style="display: flex; flex-direction: column;  margin-top: 30px;  align-items: center; justify-content: flex-start; width: 100%;">
+        <h2 class="" style="font-size: 28px;  text-align: center; color:  #2B388F;">
             Frequently Asked Questions</h2>
-        <div class="container" style="width: 100%; max-width: 800px; padding: 20px;">
+        <div class="container" style="width: 100%; max-width: 800px; ">
 
             <div class="st-accordian-wrap">
 
-                <div class="st-accordian active" style="margin-bottom: 15px;">
+                <div class="st-accordian active">
                     <div class="st-accordian-title"
-                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        style="font-size: 18px; font-weight: bold;font-size: medium; font-family: 'Poppins', sans-serif; cursor: pointer; background-color:  #2B388F; color: #fff;">
                         What are the risks of varicose veins treatment?
                         <span class="st-accordian-toggle fa fa-angle-down"></span>
                     </div>
-                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: block;">
+                    <div class="st-accordian-body"
+                        style="font-size: 16px; margin-top: 10px; display: block; font-size: medium; font-family: 'Poppins', sans-serif;">
                         Our varicose veins treatments are quite safe and are performed by experienced doctors. However,
                         in rare cases, the treatment can cause nerve damage and infections.
                     </div>
@@ -1615,11 +1712,12 @@
 
                 <div class="st-accordian" style="margin-bottom: 15px;">
                     <div class="st-accordian-title"
-                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; font-size: medium; font-family: 'Poppins', sans-serif;background-color:  #2B388F; color: #fff;">
                         What is the recovery time for varicose veins treatment?
                         <span class="st-accordian-toggle fa fa-angle-down"></span>
                     </div>
-                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                    <div class="st-accordian-body"
+                        style="font-size: 16px; font-size: medium; font-family: 'Poppins', sans-serif;margin-top: 10px; display: none;">
                         At our varicose hospital, patients begin walking within a few hours of treatment and can return
                         home on the same day. You can expect to make a full recovery within a few weeks.
                     </div>
@@ -1627,11 +1725,12 @@
 
                 <div class="st-accordian" style="margin-bottom: 15px;">
                     <div class="st-accordian-title"
-                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; font-size: medium; font-family: 'Poppins', sans-serif; color: #fff;">
                         How to prepare for varicose veins treatment?
                         <span class="st-accordian-toggle fa fa-angle-down"></span>
                     </div>
-                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                    <div class="st-accordian-body"
+                        style="font-size: 16px; margin-top: 10px; display: none; font-size: medium; font-family: 'Poppins', sans-serif;">
                         Communicate all of your concerns with our doctors. Make sure you inform them about all the
                         medicines you are taking. Eat a healthy diet, drink plenty of water and stop smoking at least a
                         week before your treatment.
@@ -1640,11 +1739,12 @@
 
                 <div class="st-accordian" style="margin-bottom: 15px;">
                     <div class="st-accordian-title"
-                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;">
+                        style="font-size: 18px; font-weight: bold; font-size: medium; font-family: 'Poppins', sans-serif;cursor: pointer; background-color:  #2B388F; color: #fff;">
                         Is the ultrasound doppler screening free at Avis Hospitals?
                         <span class="st-accordian-toggle fa fa-angle-down"></span>
                     </div>
-                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                    <div class="st-accordian-body"
+                        style="font-size: 16px; font-size: medium; font-family: 'Poppins', sans-serif; margin-top: 10px; display: none;">
                         The doppler test for varicose veins cost is ₹4500, but you can get it for free at our varicose
                         veins hospital. The doppler screening is free only for the first consultation, and is only
                         conducted if the doctor deems it necessary for diagnosis.
@@ -1653,11 +1753,12 @@
 
                 <div class="st-accordian" style="margin-bottom: 15px;">
                     <div class="st-accordian-title"
-                        style="font-size: 18px; font-weight: bold; cursor: pointer; background-color:  #2B388F; color: #fff;"">
+                        style="font-size: 18px; font-weight: bold; font-size: medium; font-family: 'Poppins', sans-serif;cursor: pointer; background-color:  #2B388F; color: #fff;"">
                         What to do to prevent varicose veins?
                         <span class=" st-accordian-toggle fa fa-angle-down"></span>
                     </div>
-                    <div class="st-accordian-body" style="font-size: 16px; margin-top: 10px; display: none;">
+                    <div class="st-accordian-body"
+                        style="font-size: 16px; font-size: medium; font-family: 'Poppins', sans-serif; margin-top: 10px; display: none;">
                         Varicose veins cannot be avoided completely, especially if your family has a history of the
                         issue. However, exercising daily, avoiding long periods of sitting or standing and a healthy
                         diet can slow down the development of varicose veins.
@@ -1668,7 +1769,7 @@
         </div>
     </div>
     <div style="
-    height: 250px;
+    height: 290px;
     width: 100%;
     background-color: #2B388F;
     display: flex;
@@ -1691,16 +1792,13 @@
                         Call Now
                     </button>
                 </a>
-                <button class="st-btn" style="
-        background-color: white;
-        color: #2B388F;
-          margin: 10px auto;
-          font-size: larger;
-          border: none;
-          cursor: pointer;
-          width: 60%; /* Adjust for mobile */" type="submit" id="submit">
-                    Book Now
-                </button>
+                <a href="#book">
+                    <button class="st-btn"
+                        style="background-color: white; color: #2B388F; margin: 10px auto; font-size: larger; border: none; cursor: pointer; width: 60%;"
+                        type="button" id="openModalBtn">
+                        Book Now
+                    </button>
+                </a>
             </div>
             <nav class="st-nav">
                 <ul class="st-nav-list st-onepage-nav" style="
@@ -1735,6 +1833,13 @@
 
 
     </div>
+
+
+
+
+
+
+
     <script>
         function navigateTo(url) {
             // Change the content without showing the URL
