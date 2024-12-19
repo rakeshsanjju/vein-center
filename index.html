@@ -51,7 +51,7 @@
             border: none;
             cursor: pointer;
             width: 100%;
-            max-width: 200px;
+            max-width: 300px;
 
         }
 
@@ -1231,7 +1231,7 @@
             <!-- Action Section -->
             <div class="action-section">
                 <a href="tel:+1234567890" class="call-now" ">
-                    <button class=" st-btn" type="button" id="submit">Call Now</button>
+                    <button class=" st-btn" type="button" id="submit"  style="width: 200px;">Call Now</button>
                 </a>
                 <div id="google_element" class="google-translate"></div>
             </div>
@@ -1268,15 +1268,16 @@
                         <h4 style="color: #fff; margin-left: 5px;">Same Day Discharge.</h4>
                     </div>
 
-                    <div style="display: flex; justify-content: center; margin-left: 40px;">
+                    <div style="display: flex; justify-content: center; margin-left: 40px; width: 60%;">
                         <a href="tel:+1234567890">
-                            <button class=" st-btn"
-                                style="background-color:  #2B388F; color: white; margin-top: 20px; border: none; cursor: pointer; width: 200px;"
+                            <button class="st-btn"
+                                style="background-color: #2B388F; color: white; margin-top: 20px; border: none; cursor: pointer; width: 300px;"
                                 type="submit" id="submit">
                                 Call Now
                             </button>
                         </a>
                     </div>
+
 
 
 
@@ -1287,35 +1288,35 @@
                     style="height: 430px; width: 100%; ">
                 <div class="text-overlays">
                     <div class="responsive-container">
-
                         <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 5px;">
                             <div class="st-vertical-middle-in">
                                 <div class="text-section">
-                                    <h4 style="text-align: center; color:  #2B388F;">Book Now </h4>
+                                    <h4 style="text-align: center; color: #2B388F;">Book Now</h4>
                                 </div>
-                                <form method="POST"
-                                    action="https://script.google.com/macros/s/AKfycbxFaNJKWny0BenqNJLFzCTz4w7TNc_PRIbJEQMvZDUQndgMrfkOs10oYSj1fRRmvonzIg/exec"
-                                    name="contact-form">
-
+                                <form id="contact-form" method="POST"
+                                    action="https://script.google.com/macros/s/AKfycbwAeDQh9FTP33qMufjrXqWocNZeNF1X73H6Y4EMi61En2bKvmpSFD4EHzhUOgR2_nR0uA/exec">
                                     <div class="row" style="margin-left: 3px;">
                                         <input type="text" name="your-name" placeholder="Full Name" class="form-input"
                                             required style="color: #ccc">
                                         <input type="text" name="your-number" placeholder="Phone Number"
                                             class="form-input" required style="color: #ccc;">
-                                        <select type="text" name="your-email" class="form-input" required
+                                        <select name="your-email" class="form-input" required
                                             style="background-color: #fff; color: #ccc;">
                                             <option value="" disabled selected>Enter Location</option>
                                             <option value="Kukatpally">Kukatpally</option>
                                             <option value="Jubliee Hills">Jubliee Hills</option>
                                             <option value="GachiBowli">GachiBowli</option>
-
+                                            <option value="Kukatpally">Vijayawada</option>
+                                            <option value="Jubliee Hills">Vizag</option>
+                                            <option value="GachiBowli">Ananthapur</option>
+                                            <option value="Kukatpally">Kadapa</option>
+                                            <option value="Jubliee Hills">Kurnool</option>
+                                            <option value="GachiBowli">Rajamundry</option>
                                         </select>
-
                                         <input name="udate" type="text" placeholder="Booking Date" class="form-input"
                                             style="color: #ccc;">
-
                                         <button class="st-btn st-color1" type="submit" id="submit"
-                                            style="background-color:  #2B388F;">
+                                            style="background-color: #2B388F;">
                                             Book Appointment
                                         </button>
                                     </div>
@@ -1323,6 +1324,9 @@
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
 
@@ -1334,15 +1338,31 @@
 
 
     </div>
-    <div style="background-color: aliceblue; width: 100%; height: 100px;">
-        <div style="display: flex; flex-direction: row; justify-content: space-around; ">
+    <div style="background-color: aliceblue; width: 100%; height: 70px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
             <h2 style="margin-top: 30px; color:  #2B388F">Jubilee Hills </h2>
             <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F">Kukatpally
             </h2>
             <h2 style="margin-top: 30px; color:  #2B388F">GachiBowli</h2>
         </div>
-
     </div>
+    <div style="background-color: aliceblue; width: 100%; height: 70px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
+            <h2 style="margin-top: 30px; color:  #2B388F">Vijayawada </h2>
+            <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F">Rajamundry
+            </h2>
+            <h2 style="margin-top: 30px; color:  #2B388F">Ananthapur</h2>
+        </div>
+    </div>
+    <div style="background-color: aliceblue; width: 100%; height: 70px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
+            <h2 style="margin-top: 30px; color:  #2B388F">Kadapa </h2>
+            <h2 style="margin-top: 30px; margin-left: 25px; color:  #2B388F">Kurnool
+            </h2>
+            <h2 style="margin-top: 30px; color:  #2B388F">Vizag</h2>
+        </div>
+    </div>
+
     <div style="margin-left: 30px; ">
         <h2 style="color: #2B388F; margin-top: 40px; text-align: center; font-size: 24px;" class="responsive-heading">
             25% of Indians Have Varicose Veins!
@@ -1463,39 +1483,35 @@
 
             <h2 style="color:  #2B388F ; display: flex;   align-items: center;">Book Your Appointment Today </h2>
 
-            <div class="custom-card" style="height: 400px;">
-                <div class="text-section">
-                    <h2 style="color: #2B388F">Book Now</h2>
-                </div>
-                <div class="st-vertical-middle-in">
-                    <form method="POST"
-                        action="https://script.google.com/macros/s/AKfycbxFaNJKWny0BenqNJLFzCTz4w7TNc_PRIbJEQMvZDUQndgMrfkOs10oYSj1fRRmvonzIg/exec"
-                        name="contact-form">
-
-                        <div class="row" style="margin-left: 3px;">
-                            <input type="text" name="your-name" placeholder="Full Name" class="form-input" required
-                                style="color: #ccc">
-                            <input type="text" name="your-number" placeholder="Phone Number" class="form-input" required
-                                style="color: #ccc;">
-                            <select type="text" name="your-email" class="form-input" required
-                                style="background-color: #fff; color: #ccc;">
-                                <option value="" disabled selected>Enter Location</option>
-                                <option value="Kukatpally">Kukatpally</option>
-                                <option value="Jubliee Hills">Jubliee Hills</option>
-                                <option value="GachiBowli">GachiBowli</option>
-
-                            </select>
-
-                            <input name="udate" type="text" placeholder="Booking Date" class="form-input"
-                                style="color: #ccc;">
-
-                            <button class="st-btn st-color1" type="button" id="submit"
-                                style="background-color: #2B388F;" onclick="window.location.href='thankyou.html'">
-                                Book Appointment
-                            </button>
-
+            <div class="responsive-container">
+                <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 5px;">
+                    <div class="st-vertical-middle-in">
+                        <div class="text-section">
+                            <h4 style="text-align: center; color: #2B388F;">Book Now</h4>
                         </div>
-                    </form>
+                        <form id="contact-form" method="POST"
+                            action="https://script.google.com/macros/s/AKfycbwAeDQh9FTP33qMufjrXqWocNZeNF1X73H6Y4EMi61En2bKvmpSFD4EHzhUOgR2_nR0uA/exec">
+                            <div class="row" style="margin-left: 3px;">
+                                <input type="text" name="your-name" placeholder="Full Name" class="form-input" required
+                                    style="color: #ccc">
+                                <input type="text" name="your-number" placeholder="Phone Number" class="form-input"
+                                    required style="color: #ccc;">
+                                <select name="your-email" class="form-input" required
+                                    style="background-color: #fff; color: #ccc;">
+                                    <option value="" disabled selected>Enter Location</option>
+                                    <option value="Kukatpally">Kukatpally</option>
+                                    <option value="Jubliee Hills">Jubliee Hills</option>
+                                    <option value="GachiBowli">GachiBowli</option>
+                                </select>
+                                <input name="udate" type="text" placeholder="Booking Date" class="form-input"
+                                    style="color: #ccc;">
+                                <button class="st-btn st-color1" type="submit" id="submit"
+                                    style="background-color: #2B388F;">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1668,9 +1684,10 @@
             background-color: white;
             color: #2B388F;
             margin: 10px auto;
+              font-size: larger;
             border: none;
             cursor: pointer;
-            width: 40%; /* Adjust for mobile */" type="button" id="submit">
+            width: 60%; /* Adjust for mobile */" type="button" id="submit">
                         Call Now
                     </button>
                 </a>
@@ -1678,9 +1695,10 @@
         background-color: white;
         color: #2B388F;
           margin: 10px auto;
+          font-size: larger;
           border: none;
           cursor: pointer;
-          width: 40%; /* Adjust for mobile */" type="submit" id="submit">
+          width: 60%; /* Adjust for mobile */" type="submit" id="submit">
                     Book Now
                 </button>
             </div>
@@ -1775,6 +1793,33 @@
             window.location.href = 'thankyou.html'; // Replace 'thankyou.html' with the actual URL of your Thank You page
         });
     </script>
+
+
+
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log('Success:', data);
+                    window.location.href = 'thankyou.html'; // Navigate to Thank You page
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting the form. Please try again.');
+                });
+        });
+    </script>
+
 
 
 
