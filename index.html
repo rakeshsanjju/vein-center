@@ -17,97 +17,104 @@
     <link rel="stylesheet" href="assets/css/theme/theme_type1.css" />
     <style>
         /* General Container Styles */
-     
-/* General Container Styles */
-.container {
-  width: 100%;
-  
-  display: flex;
-  flex-direction: row; /* Default for web view */
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
 
-/* Logo Styling */
-.logo img {
-  width: 300px;
-  height: 100px;
-}
+        /* General Container Styles */
+        .container {
+            width: 100%;
 
-/* Action Section */
-.action-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
+            display: flex;
+            flex-direction: row;
+            /* Default for web view */
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+        }
 
-/* Call Button Styling */
-.st-btn {
-  background-color: #2B388F;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  max-width: 200px;
- 
-}
+        /* Logo Styling */
+        .logo img {
+            width: 300px;
+            height: 100px;
+        }
 
-/* Google Translate Section */
-.google-translate {
-  margin-top: 10px;
-  margin-left: 20px;
-  width: 100%;
-  max-width: 200px;
-}
+        /* Action Section */
+        .action-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-/* Responsive Design */
+        /* Call Button Styling */
+        .st-btn {
+            background-color: #2B388F;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
 
-/* For Devices with Max Width of 764px */
-@media (max-width: 764px) {
-  .container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    justify-content: center;
-  }
-  .container > div {
-    margin-bottom: 15px; /* Add spacing between items */
-  }
-  .google-translate {
-    margin-left: 0; /* Remove left margin for centering */
-  }
-}
+        }
 
-/* For Devices with Max Width of 640px */
-@media (max-width: 640px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .container > div {
-    margin-bottom: 15px;
-  }
-}
-
-/* For Devices with Max Width of 475px */
-@media (max-width: 475px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
- 
-}
-
-       
         /* Google Translate Section */
-        
+        .google-translate {
+            margin-top: 10px;
+            margin-left: 20px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        /* Responsive Design */
+
+        /* For Devices with Max Width of 764px */
+        @media (max-width: 764px) {
+            .container {
+                flex-direction: column;
+                /* Stack elements vertically */
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container>div {
+                margin-bottom: 15px;
+                /* Add spacing between items */
+            }
+
+            .google-translate {
+                margin-left: 0;
+                /* Remove left margin for centering */
+            }
+        }
+
+        /* For Devices with Max Width of 640px */
+        @media (max-width: 640px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container>div {
+                margin-bottom: 15px;
+            }
+        }
+
+        /* For Devices with Max Width of 475px */
+        @media (max-width: 475px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+
+        /* Google Translate Section */
+
 
         /* Responsive Design for Mobile View */
-       
-      
+
+
 
         .action-section {
             display: flex;
@@ -626,8 +633,9 @@
                 font-size: 14px;
             }
         }
-        .responsive-container{
-            display: flex; 
+
+        .responsive-container {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
@@ -637,6 +645,7 @@
                 width: 100%;
                 margin-left: 0px;
             }
+
             .responsive-container {
                 display: flex;
                 flex-direction: column;
@@ -661,6 +670,7 @@
             .full-width-card {
                 text-align: center;
             }
+
             .responsive-container {
                 display: flex;
                 flex-direction: column;
@@ -1196,6 +1206,18 @@
                     text-align: center;
                 }
             }
+
+            /* Default styles for the navigation */
+            .st-nav {
+                display: block;
+            }
+
+            /* Hide navigation on mobile (screen width less than 768px) */
+            @media screen and (max-width: 768px) {
+                .st-nav {
+                    display: none;
+                }
+            }
     </style>
 </head>
 
@@ -1209,7 +1231,7 @@
             <!-- Action Section -->
             <div class="action-section">
                 <a href="tel:+1234567890" class="call-now" ">
-                    <button class="st-btn" type="button" id="submit">Call Now</button>
+                    <button class=" st-btn" type="button" id="submit">Call Now</button>
                 </a>
                 <div id="google_element" class="google-translate"></div>
             </div>
@@ -1218,47 +1240,53 @@
 
         <div class="sample" style="margin-top: 30px;  ">
             <div class="image-container">
-                <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image" style="height: 430px; ">
+                <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image"
+                    style="height: 430px; width: 100%; ">
                 <div class="text-overlay" style="margin-top: 30px;">
                     <h2 style="color: #fff; margin-left: 30px;">Best Hospital for Varicose Veins <br>Treatment in
                         Hyderabad.</h2>
                     <div style="display: flex; flex-direction: row; margin-top: 15px;">
                         <i aria-hidden="true" class="far fa-arrow-alt-circle-right"
                             style="margin-top: 5px; margin-left: 60px;"></i>
-                        <h4 style="color: #fff; margin-left: 20px;">45 Minutes Painless Treatments.</h4>
+                        <h4 style="color: #fff; margin-left: 5px;">45 Minutes Painless Treatments.</h4>
                     </div>
                     <div style="display: flex; flex-direction: row; margin-top: 15px;">
                         <i aria-hidden="true" class="far fa-arrow-alt-circle-right"
                             style="margin-top: 5px; margin-left: 60px;"></i>
-                        <h4 style="color: #fff; margin-left: 20px;">All Major Insurance Accepted.
+                        <h4 style="color: #fff; margin-left: 5px;">All Major Insurance Accepted.
 
                             .</h4>
                     </div>
                     <div style="display: flex; flex-direction: row; margin-top: 15px;">
                         <i aria-hidden="true" class="far fa-arrow-alt-circle-right"
                             style="margin-top: 5px; margin-left: 60px;"></i>
-                        <h4 style="color: #fff; margin-left: 20px;">Non-Surgical USFDA Approved Procedures..</h4>
+                        <h4 style="color: #fff; margin-left: 5px;">Non-Surgical USFDA Approved.</h4>
                     </div>
                     <div style="display: flex; flex-direction: row; margin-top: 15px;">
                         <i aria-hidden="true" class="far fa-arrow-alt-circle-right"
                             style="margin-top: 5px; margin-left: 60px;"></i>
-                        <h4 style="color: #fff; margin-left: 20px;">Same Day Discharge.</h4>
+                        <h4 style="color: #fff; margin-left: 5px;">Same Day Discharge.</h4>
                     </div>
 
-                    <button class="st-btn"
+                    <div style="display: flex; justify-content: center; margin-left: 40px;">
+                        <button class="st-btn"
                         style="background-color:  #2B388F; color: white; margin-top: 20px; border: none; cursor: pointer; width: 200px;"
                         type="submit" id="submit">
                         Call Now
                     </button>
+                    </div>
+
+                    
 
                 </div>
             </div>
             <div class="image-containers">
-                <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image" style="height: 430px; ">
+                <img src="./assets/banner 13.jpeg" alt="Varicose Veins Treatment" class="image"
+                    style="height: 430px; width: 100%; ">
                 <div class="text-overlays">
                     <div class="responsive-container">
 
-                        <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 20px;">
+                        <div class="custom-card" style="height: 380px; margin-right: 10px; margin-top: 5px;">
                             <div class="st-vertical-middle-in">
                                 <div class="text-section">
                                     <h4 style="text-align: center; color:  #2B388F;">Book Now </h4>
@@ -1429,7 +1457,7 @@
 
     <div class="full-width-card">
         <!-- Content inside the card -->
-        <div class="responsive-container" >
+        <div class="responsive-container">
 
             <h2 style="color:  #2B388F ; display: flex;   align-items: center;">Book Your Appointment Today </h2>
 
@@ -1459,10 +1487,11 @@
                             <input name="udate" type="text" placeholder="Booking Date" class="form-input"
                                 style="color: #ccc;">
 
-                            <button class="st-btn st-color1" type="submit" id="submit"
-                                style="background-color:   #2B388F;">
+                            <button class="st-btn st-color1" type="button" id="submit"
+                                style="background-color: #2B388F;" onclick="window.location.href='thankyou.html'">
                                 Book Appointment
                             </button>
+
                         </div>
                     </form>
                 </div>
@@ -1495,7 +1524,7 @@
             <h2 style="color: #2B388F">Symptoms</h2>
 
             <div class="symptom-item" ">
-                <img src="./assets/right_mark.png" alt="Symptom icon">
+                <img src=" ./assets/right_mark.png" alt="Symptom icon">
                 <h4>Sensations of irritation, burning or itching.
                 </h4>
             </div>
@@ -1655,22 +1684,28 @@
             </div>
             <nav class="st-nav">
                 <ul class="st-nav-list st-onepage-nav" style="
-          list-style: none;
-          padding: 0;
-          display: flex;
-          flex-wrap: wrap; /* Adjust links for mobile */
-          justify-content: center;
-          ">
-                    <li><a href="./apts.html" class="st-smooth-move" style="color: gray;">APTS</a></li>
-                    <li><a href="./tamilnadu.html" class="st-smooth-move" style="color: gray;">Tamil Nadu</a></li>
-                    <li><a href="./westbengal.html" class="st-smooth-move" style="color: gray;">West Bengal</a></li>
-                    <li><a href="./maharastra.html" class="st-smooth-move" style="color: gray;">Maharashtra</a></li>
-                    <li><a href="./delhi.html" class="st-smooth-move" style="color: gray;">Delhi</a></li>
-                    <li><a href="./karnataka.html" class="st-smooth-move" style="color: gray;">Karnataka</a></li>
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap; /* Adjust links for mobile */
+        justify-content: center;
+    ">
+                    <li><a href="#" onclick="navigateTo('./apts.html')" class="st-smooth-move"
+                            style="color: gray;">APTS</a></li>
+                    <li><a href="#" onclick="navigateTo('./tamilnadu.html')" class="st-smooth-move"
+                            style="color: gray;">Tamil Nadu</a></li>
+                    <li><a href="#" onclick="navigateTo('./westbengal.html')" class="st-smooth-move"
+                            style="color: gray;">West Bengal</a></li>
+                    <li><a href="#" onclick="navigateTo('./maharastra.html')" class="st-smooth-move"
+                            style="color: gray;">Maharashtra</a></li>
+                    <li><a href="#" onclick="navigateTo('./delhi.html')" class="st-smooth-move"
+                            style="color: gray;">Delhi</a></li>
+                    <li><a href="#" onclick="navigateTo('./karnataka.html')" class="st-smooth-move"
+                            style="color: gray;">Karnataka</a></li>
                 </ul>
             </nav>
         </div>
-    </div> 
+    </div>
 
 
     <div style="display: flex; justify-content: center; margin-top: 20px;">
@@ -1680,6 +1715,12 @@
 
 
     </div>
+    <script>
+        function navigateTo(url) {
+            // Change the content without showing the URL
+            window.location.assign(url);
+        }
+    </script>
 
     <script>
         document.querySelectorAll('.st-accordian-title').forEach(title => {
@@ -1720,6 +1761,11 @@
             var language = this.value;
             google.translate.TranslateElement.prototype.hidePopup(); // Hide Google Translate popup if it's open
             google.translate.TranslateElement.prototype.translatePage(language, 'en'); // Translate the page
+        });
+    </script>
+    <script>
+        document.getElementById('submit').addEventListener('click', function () {
+            window.location.href = 'thankyou.html'; // Replace 'thankyou.html' with the actual URL of your Thank You page
         });
     </script>
 
